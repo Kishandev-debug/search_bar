@@ -1,0 +1,134 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Wrapper for search bar and suggestions */
+.search-wrapper {
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 45%;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 18px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+/* Suggestions dropdown */
+.suggestions {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestions p {
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestions p:hover {
+    background-color: #f4f4f9;
+}
+
+.suggestions p.no-results {
+    color: #888;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-wrapper {
+        width: 95%;
+    }
+
+    .search-bar {
+        padding: 5px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        width: 80px;
+        height: 36px;
+        font-size: 10px;
+    }
+
+    .suggestions {
+        top: 55px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar input {
+        font-size: 12px;
+    }
+
+    .search-bar button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .suggestions {
+        top: 50px;
+    }
+}
